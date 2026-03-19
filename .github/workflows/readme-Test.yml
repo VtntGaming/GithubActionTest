@@ -1,0 +1,19 @@
+name: README File test # The name of the test
+
+on:
+  push:
+    branches: ["main"]  # Run when there's changes in main branch
+
+jobs:
+  do_stuff:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a friendly message
+        run: echo "Hello, World!"
+
+      - name: Getting the code
+        run: action/checkout@v6.0.2  # Checkout by @actions
+
+      - name: Read & write the README file
+        run: cat README.md  # Call "cat" to read the file
