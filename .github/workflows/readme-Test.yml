@@ -13,7 +13,7 @@ jobs:
         run: echo "Hello, World!"
 
       - name: Getting the code
-        run: actions/checkout@v6.0.2  # Checkout by @actions
+        uses: actions/checkout@v6.0.2  # Checkout by @actions
 
       - name: Read & write the README file
         run: cat README.md  # Call "cat" to read the file
